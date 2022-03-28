@@ -9,16 +9,16 @@ func compare(value int) string {
 
 	//Insert your code from here
 	if value == secretValue {
-		resultMessge = "correct"
+		resultMessge = "Well Done! Your guess is correct"
 	}
 
 	if value > secretValue {
-		resultMessge = "too high"
+		resultMessge = "Too high, try again next time!"
 		fmt.Println(resultMessge)
 	}
 
 	if value < secretValue {
-		resultMessge = "too low"
+		resultMessge = "Too low, try again next time!"
 		fmt.Println(resultMessge)
 	}
 
@@ -28,15 +28,16 @@ func compare(value int) string {
 
 func main() {
 	var guess int
-	for {
-		fmt.Println("Enter an integer value: ")
-		fmt.Scanln(&guess)
-		// fmt.Printf("%T, %v\n", guess, guess)
-		result := compare(guess)
-		if result == "correct" {
-			fmt.Println("guess correct")
-			break
-		}
-	}
+	// for {
+	fmt.Println("Enter an integer value: ")
+	fmt.Scanln(&guess)
+	// fmt.Printf("%T, %v\n", guess, guess)
+	compare(guess)
+	// result := compare(guess)
+	// if result == "correct" {
+	// 	fmt.Println("guess correct")
+	// 	break
+	// }
+	// }
 
 }
